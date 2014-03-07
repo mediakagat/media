@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+<link href="css/jquery.mobile-1.4.2.min.css" rel="stylesheet" type="text/css"/>
+--->
+<link rel="stylesheet" href="css/themes/uuu.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.min.css" />
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+<!-- panel luar -->
+<script>
+	$(function() {
+		$('#mypanel').panel().enhanceWithin();
+	});
+</script>
+<div data-role="panel" id="mypanel" data-theme="b">
+	<!-- panel content goes here -->
+	<h3>Menu</h3>
+	<ul data-role="listview" data-inset="true">
+		<li><a href="#pg1">Muka 1</a></li>
+		<li><a href="#pg2">Muka 2</a></li>
+		<li><a href="#pg3">Muka 3</a></li>
+	</ul>
+</div>
+<!-- /panel -->	
+<!-- Page 1 -->
+<div data-role="page" id="pg3">
+	<!-- header -->
+	<div data-role="header" data-add-back-btn="true" data-position="fixed">
+		<a href="#mypanel" data-rel="panel" data-icons="bars">Menu</a>
+		<h1>Page Title1</h1>
+	</div>
+	<!--/header -->
+	<!--content -->
+	<div role="main" class="ui-content">
+		<h3>Tajuk</h3>	
+		<p>Fantasi Atau Realiti</p>
+		<img src="Img/bugati.jpg" />
+		<p>Kalau Aku Kaya
+		<a href="#pg1" class="ui-btn">Laman Ke1</a>
+		<a href="#pg3" class="ui-btn">Laman 3</a>
+	</div>
+	<!-- /content -->
+	<!-- /footer -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a data-icon="home" class="ui-btn-active ui-state-persist">Pg1</a></li>
+				<li><a data-icon="star" href="#pg2" data-transition="flip">Pg2</a></li>
+				<li><a data-icon="alert" href="#pg3" data-transition="flip">Pg3</a></li>
+			</ul>
+		</div>
+	</div>		
+	<!-- /footer -->
+</div>	
+	
+<!-- Page 2 -->
+<div data-role="page" id="pg2" data-theme="b">
+	<!-- header -->
+	<div data-role="header" data-add-back-btn="true" data-position="fixed">
+		<h1>Page Title 2</h1>
+	</div>
+	<!--/header -->
+	<!--content -->
+	<div role="main" class="ui-content">
+		<h3>Sekapur Sireh</h3>
+		<div data-role="collapsible">
+			<h4>organisasi</h4>
+			<p>
+			Angkatan Tentera Malaysia (ATM) diketuai oleh Panglima Angkatan Tentera (PAT) berpangkat Jeneral. Beliau adalah ketua profesional ATM yang dilantik oleh Seri Paduka Baginda Yang di-Pertuan Agong. Beliau memerintah dan mentadbir ATM melalui Jawatankuasa Panglima-Panglima (JPP).
+			</p>
+		</div>
+		<div data-role="collapsible">
+			<h4>Sejarah</h4>
+			<img src="img/DSC_0153a.jpg">
+			<p>
+			Angkatan Tentera Malaysia (ATM) diketuai oleh Panglima Angkatan Tentera (PAT) berpangkat Jeneral. Beliau adalah ketua profesional ATM yang dilantik oleh Seri Paduka Baginda Yang di-Pertuan Agong. Beliau memerintah dan mentadbir ATM melalui Jawatankuasa Panglima-Panglima (JPP).
+			</p>
+		<a href="#pg1" class="ui-btn">Laman Ke1</a>
+		<a href="#pg3" class="ui-btn">Laman 3</a>
+		
+		</div>
+	</div>
+	<!-- /footer -->
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>	
+	<!-- /footer -->
+</div>
+	<!-- Page 3 -->
+<div data-role="page" id="pg3">
+	<!-- header -->
+	<div data-role="header" data-add-back-btn="true" data-position="fixed">
+		<h1>Page Title3</h1>
+	</div>
+	<!--/header -->
+	<!--content -->
+	<div role="main" class="ui-content">
+		<h3>Senarai Kakitangan</h3>
+		<!-- kpln list -->
+		<ul data-role="listview" data-inset="true">	
+			<li>
+			<a href="#pop1" data-rel="popup">
+				<img src="img/Kolonel.jpg" width="100" />
+				<h3>Kolonel</h3>
+				<p>Panglima</p>
+				</a>
+			</li>
+			<li>
+			<a href="#pop1" data-rel="popup">
+				<img src="img/Pang5.jpg" width="100" />
+				<h3>Mejar</h3>
+				<p>Pang5</p>
+				</a>
+			</li>
+			<li>
+			<a href="#pop1" data-rel="popup">
+				<img src="img/Bugati.jpg" width="100" />
+				<h3>Kapten</h3>
+				<p>Bugati</p>
+				</a>	
+			</li>
+		</ul>
+		<!-- kpln popup utk setiap list -->
+		<div data-role="popup" id="pop1"style="max-width:400px;">
+			<ul data-role="listview">
+				<li>
+				<a href="tel:+60193840289" class="ui-btn ui-btn-icon-left ui-icon-phone">call</a>
+				</li>
+				<li>
+				<a href="sms://+60193840289" class="ui-btn ui-btn-icon-left ui-icon-edit">sms</a>
+				</li>
+				<li>
+				<a href="mailto:fadzlishamsuddin@gmail.com" class="ui-btn ui-btn-icon-left ui-icon-mail">mail</a>
+				</li>
+			</ul>
+		</div>
+		<a href="#pg2" class="ui-btn">Laman Asas</a>
+		<a href="#pg3" class="ui-btn">Laman 3</a>
+		
+	</div>
+	<!-- /footer -->
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>	
+	<!-- /footer -->
+</div>	
+</body>
+</html>
